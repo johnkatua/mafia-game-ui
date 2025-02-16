@@ -43,7 +43,7 @@ const FeaturesSection = () => {
             >
               <CardHeader className="flex items-center gap-3">
                 <feature.icon className="w-8 h-8 text-red-500" />
-                <CardTitle className="text-lg font-semibold">
+                <CardTitle className="text-lg font-semibold text-white">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
