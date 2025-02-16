@@ -47,7 +47,7 @@ const LiveStats = () => {
             <Card className="bg-gray-800 border border-gray-700 text-center">
               <CardHeader>
                 <Users className="w-10 h-10 text-green-400 mx-auto" />
-                <CardTitle className="text-xl font-semibold">
+                <CardTitle className="text-xl font-semibold text-white">
                   {stats.onlinePlayers.toLocaleString()} Players Online
                 </CardTitle>
               </CardHeader>
@@ -64,7 +64,7 @@ const LiveStats = () => {
             <Card className="bg-gray-800 border border-gray-700 text-center">
               <CardHeader>
                 <Flame className="w-10 h-10 text-orange-400 mx-auto" />
-                <CardTitle className="text-xl font-semibold">
+                <CardTitle className="text-xl font-semibold text-white">
                   {stats.totalGames.toLocaleString()} Rounds Completed
                 </CardTitle>
               </CardHeader>
@@ -82,7 +82,7 @@ const LiveStats = () => {
             <Card className="bg-gray-800 border border-gray-700 text-center">
               <CardHeader>
                 <Trophy className="w-10 h-10 text-yellow-400 mx-auto" />
-                <CardTitle className="text-xl font-semibold">
+                <CardTitle className="text-xl font-semibold text-white">
                   Top Players
                 </CardTitle>
               </CardHeader>

@@ -11,7 +11,7 @@ const testimonials = [
     id: 1,
     name: "Ethan ‘ShadowFox’",
     text: "The best online Mafia game I've played! So much strategy and fun.",
-    avatar: "/avatars/user1.jpg",
+    avatar: "/avatars/user2.jpg",
     title: "Image by brgfx on Freepik",
   },
   {
