@@ -26,6 +26,8 @@
 import { Button } from "@/components/ui/button";
 import FeaturesSection from "./components/FeaturesSection";
 import HowItWorks from "./components/HowItWorks";
+import LiveStats from "./components/LiveStats";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -63,6 +65,8 @@ export default function Home() {
       </div>
       <FeaturesSection />
       <HowItWorks />
+      <LiveStats />
+      <Testimonials />
     </div>
   );
 }
