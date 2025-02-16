@@ -9,7 +9,10 @@ export default {
   ],
   theme: {
   	extend: {
-  		colors: {
+			colors: {
+				'primary-color': 'var(--primary-color)',
+				'header-color': 'var(--header-color)',
+				'text-color': 'var(--text-color)',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

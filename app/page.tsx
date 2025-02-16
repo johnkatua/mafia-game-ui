@@ -13,7 +13,7 @@ export default function Home() {
         />
         <div className="absolute top-0 left-0 bottom-0 right-0 p-6">
           <div className="bg-slate-300 flex items-center justify-center">
-            <div className="bg-black text-white py-2 px-4 rounded-3xl w-[560px]">
+            <div className="bg-black text-color py-2 px-4 rounded-3xl w-[560px]">
               Header
             </div>
           </div>
