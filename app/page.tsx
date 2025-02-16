@@ -25,6 +25,7 @@
 
 import { Button } from "@/components/ui/button";
 import FeaturesSection from "./components/FeaturesSection";
+import HowItWorks from "./components/HowItWorks";
 
 export default function Home() {
   return (
@@ -61,6 +62,7 @@ export default function Home() {
         </div>
       </div>
       <FeaturesSection />
+      <HowItWorks />
     </div>
   );
 }
