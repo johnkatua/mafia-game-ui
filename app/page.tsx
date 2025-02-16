@@ -28,6 +28,7 @@ import FeaturesSection from "./components/FeaturesSection";
 import HowItWorks from "./components/HowItWorks";
 import LiveStats from "./components/LiveStats";
 import Testimonials from "./components/Testimonials";
+import CTA from "./components/CTA";
 
 export default function Home() {
   return (
@@ -67,6 +68,7 @@ export default function Home() {
       <HowItWorks />
       <LiveStats />
       <Testimonials />
+      <CTA />
     </div>
   );
 }
