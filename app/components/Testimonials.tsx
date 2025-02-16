@@ -12,18 +12,21 @@ const testimonials = [
     name: "Ethan ‘ShadowFox’",
     text: "The best online Mafia game I've played! So much strategy and fun.",
     avatar: "/avatars/user1.jpg",
+    title: "Image by brgfx on Freepik",
   },
   {
     id: 2,
     name: "Sophia ‘SilentReaper’",
     text: "Every round feels fresh, and the real-time aspect is insane!",
     avatar: "/avatars/user2.jpg",
+    title: "Image by pikisuperstar on Freepik",
   },
   {
     id: 3,
     name: "Liam ‘CrimsonKing’",
     text: "The intensity of deception in this game is unmatched. I’m addicted!",
     avatar: "/avatars/user3.jpg",
+    title: "Image by pikisuperstar on Freepik",
   },
 ];
 
@@ -73,6 +76,7 @@ const Testimonials = () => {
                   width={80}
                   height={80}
                   className="rounded-full border-2 border-yellow-400"
+                  title={testimonials[index].title}
                 />
 
                 {/* Stars */}

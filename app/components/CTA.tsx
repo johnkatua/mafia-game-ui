@@ -10,7 +10,7 @@ const CTA = () => {
       {/* Background Image or Moody Gradient */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/mafia-bg.jpg" // Change to a moody Mafia-themed image
+          src="/avatars/user2.jpg" // Change to a moody Mafia-themed image
           alt="Mafia Game"
           layout="fill"
           objectFit="cover"
