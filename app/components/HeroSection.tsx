@@ -3,9 +3,9 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import MGDialog from "./mg-dialog";
 import { useDialogStore } from "../stores";
 import CreateGameForm from "./forms/CreateGameForm";
+import MGDialog from "./mg-dialog";
 
 const HeroSection = () => {
   const { openDialog } = useDialogStore();
@@ -63,7 +63,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
       <MGDialog
-        btnText={"Create Game"}
         description="Enter a host name to start the game."
         title="Create a New Game"
       >
