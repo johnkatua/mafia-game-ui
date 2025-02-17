@@ -48,7 +48,7 @@ const HowItWorks = () => {
                   {step.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-300">
+              <CardContent className="flex justify-center text-gray-300">
                 {step.description}
               </CardContent>
             </Card>
