@@ -52,7 +52,7 @@ const MGDialog: FC<PropsWithChildren<MGDialogProps>> = ({
           </motion.div>
         </AlertDialogHeader>
         {children}
-        <AlertDialogFooter>
+        {/* <AlertDialogFooter>
           <AlertDialogCancel
             onClick={closeDialog}
             className="px-6 py-3 text-lg font-semibold border-2 bg-transparent border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black hover:scale-105 transition-all rounded-full"
@@ -65,7 +65,7 @@ const MGDialog: FC<PropsWithChildren<MGDialogProps>> = ({
           >
             {btnText}
           </AlertDialogAction>
-        </AlertDialogFooter>
+        </AlertDialogFooter> */}
       </AlertDialogContent>
     </AlertDialog>
   );
