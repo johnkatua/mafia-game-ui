@@ -63,8 +63,8 @@ const HeroSection = () => {
       </div>
       <MGDialog
         btnText={"Create Game"}
-        description="Create a game"
-        title="Create Game"
+        description="Enter a host name to start the game."
+        title="Create a New Game"
       ></MGDialog>
     </section>
   );
