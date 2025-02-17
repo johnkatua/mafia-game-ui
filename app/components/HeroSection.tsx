@@ -3,8 +3,11 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import MGDialog from "./mg-dialog";
+import { useDialogStore } from "../stores";
 
 const HeroSection = () => {
+  const { openDialog } = useDialogStore();
   return (
     <section className="h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white relative overflow-hidden">
       {/* Background Image with Overlay */}
@@ -48,7 +51,7 @@ const HeroSection = () => {
           className="mt-8 flex gap-4 justify-center"
         >
           <Button
-            onClick={() => {}}
+            onClick={openDialog}
             className="px-6 py-3 text-lg font-semibold rounded-full bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105 transition-all shadow-md"
           >
             🎯 Play Now
@@ -58,6 +61,11 @@ const HeroSection = () => {
           </Button>
         </motion.div>
       </div>
+      <MGDialog
+        btnText={"Create Game"}
+        description="Create a game"
+        title="Create Game"
+      ></MGDialog>
     </section>
   );
 };
