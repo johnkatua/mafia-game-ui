@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import SectionHeader from "./SectionHeader";
 
 const testimonials = [
   {
@@ -41,10 +42,10 @@ const Testimonials = () => {
   return (
     <section className="py-16 bg-gray-950 text-white relative overflow-hidden">
       <div className="max-w-4xl mx-auto text-center px-6">
-        <h2 className="text-4xl font-bold tracking-wide">What Players Say</h2>
-        <p className="text-gray-400 mt-2">
-          Real reviews from the Mafia community.
-        </p>
+        <SectionHeader
+          title={"What Players Say"}
+          subTitle={"Real reviews from the Mafia community."}
+        />
       </div>
 
       {/* Testimonial Cards */}
