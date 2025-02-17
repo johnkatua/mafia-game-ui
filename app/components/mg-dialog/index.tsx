@@ -1,3 +1,4 @@
+import { useDialogStore } from "@/app/stores";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -24,8 +25,9 @@ const MGDialog: FC<PropsWithChildren<MGDialogProps>> = ({
   title,
   children,
 }) => {
+  const { isOpen, closeDialog } = useDialogStore();
   return (
-    <AlertDialog>
+    <AlertDialog open={isOpen}>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>{title}</AlertDialogTitle>
@@ -33,8 +35,8 @@ const MGDialog: FC<PropsWithChildren<MGDialogProps>> = ({
         </AlertDialogHeader>
         {children}
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>{btnText}</AlertDialogAction>
+          <AlertDialogCancel onClick={closeDialog}>Cancel</AlertDialogCancel>
+          <AlertDialogAction onClick={closeDialog}>{btnText}</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
