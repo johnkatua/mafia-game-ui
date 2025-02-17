@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Users, Clock, EyeOff } from "lucide-react";
+import SectionHeader from "./SectionHeader";
 
 const features = [
   {
@@ -28,6 +29,12 @@ const features = [
 const FeaturesSection = () => {
   return (
     <section className="py-16 bg-gray-900 text-white">
+      <SectionHeader
+        title={"Why Play?"}
+        subTitle={
+          "Outsmart, strategize, and survive in the ultimate game of deception."
+        }
+      />
       <div className="max-w-5xl mx-auto text-center px-6">
         <h2 className="text-4xl font-bold tracking-wide text-yellow-400">
           Why Play?
