@@ -29,7 +29,9 @@ const FeaturesSection = () => {
   return (
     <section className="py-16 bg-gray-900 text-white">
       <div className="max-w-5xl mx-auto text-center px-6">
-        <h2 className="text-4xl font-bold tracking-wide">Why Play?</h2>
+        <h2 className="text-4xl font-bold tracking-wide text-yellow-400">
+          Why Play?
+        </h2>
         <p className="text-gray-400 mt-2">
           Outsmart, strategize, and survive in the ultimate game of deception.
         </p>
