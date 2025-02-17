@@ -1,16 +1,13 @@
 import { useDialogStore } from "@/app/stores";
 import {
   AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
-  AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { FC, ReactNode, PropsWithChildren } from "react";
 import { motion } from "framer-motion";
+import { FC, PropsWithChildren, ReactNode } from "react";
 
 interface MGDialogProps {
   description: string;
