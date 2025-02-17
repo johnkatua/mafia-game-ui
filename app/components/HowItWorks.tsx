@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { UserPlus, Users, Gavel, Trophy } from "lucide-react";
+import SectionHeader from "./SectionHeader";
 
 const steps = [
   {
@@ -29,10 +30,10 @@ const HowItWorks = () => {
   return (
     <section className="py-16 bg-gray-950 text-white">
       <div className="max-w-5xl mx-auto text-center px-6">
-        <h2 className="text-4xl font-bold tracking-wide">How It Works</h2>
-        <p className="text-gray-400 mt-2">
-          Master the game in four simple steps.
-        </p>
+        <SectionHeader
+          title={"How It Works"}
+          subTitle={"Master the game in four simple steps."}
+        />
 
         {/* Steps Grid */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
