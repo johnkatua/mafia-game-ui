@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Flame, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import SectionHeader from "./SectionHeader";
 
 const initialStats = {
   onlinePlayers: 3410,
@@ -33,10 +34,10 @@ const LiveStats = () => {
   return (
     <section className="py-16 bg-gray-900 text-white">
       <div className="max-w-5xl mx-auto text-center px-6">
-        <h2 className="text-4xl font-bold tracking-wide">Live Stats</h2>
-        <p className="text-gray-400 mt-2">
-          Stay updated with real-time game stats.
-        </p>
+        <SectionHeader
+          title={"Live Stats"}
+          subTitle={"Stay updated with real-time game stats."}
+        />
 
         {/* Stats Cards */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
