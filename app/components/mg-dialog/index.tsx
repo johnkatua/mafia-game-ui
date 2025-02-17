@@ -13,7 +13,6 @@ import { FC, ReactNode, PropsWithChildren } from "react";
 import { motion } from "framer-motion";
 
 interface MGDialogProps {
-  btnText: string;
   description: string;
   title: string;
   children?: ReactNode;
@@ -21,7 +20,6 @@ interface MGDialogProps {
 
 // MGDialog -> A custom Mafia Game Dialog
 const MGDialog: FC<PropsWithChildren<MGDialogProps>> = ({
-  btnText,
   description,
   title,
   children,
@@ -52,20 +50,6 @@ const MGDialog: FC<PropsWithChildren<MGDialogProps>> = ({
           </motion.div>
         </AlertDialogHeader>
         {children}
-        {/* <AlertDialogFooter>
-          <AlertDialogCancel
-            onClick={closeDialog}
-            className="px-6 py-3 text-lg font-semibold border-2 bg-transparent border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black hover:scale-105 transition-all rounded-full"
-          >
-            Cancel
-          </AlertDialogCancel>
-          <AlertDialogAction
-            onClick={closeDialog}
-            className="px-6 py-3 text-lg font-semibold rounded-full bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105 transition-all shadow-md"
-          >
-            {btnText}
-          </AlertDialogAction>
-        </AlertDialogFooter> */}
       </AlertDialogContent>
     </AlertDialog>
   );
