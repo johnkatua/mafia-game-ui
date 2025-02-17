@@ -21,7 +21,7 @@ const MGDialog: FC<PropsWithChildren<MGDialogProps>> = ({
   title,
   children,
 }) => {
-  const { isOpen, closeDialog } = useDialogStore();
+  const { isOpen } = useDialogStore();
   return (
     <AlertDialog open={isOpen}>
       <AlertDialogContent className="bg-gray-900 border-none">
