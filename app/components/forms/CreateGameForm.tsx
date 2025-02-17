@@ -26,12 +26,14 @@ const CreateGameForm = () => {
         </div>
         <AlertDialogFooter>
           <AlertDialogCancel
+            type="reset"
             onClick={closeDialog}
             className="px-6 py-3 text-lg font-semibold border-2 bg-transparent border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black hover:scale-105 transition-all rounded-full"
           >
             Cancel
           </AlertDialogCancel>
           <AlertDialogAction
+            type="submit"
             onClick={closeDialog}
             className="px-6 py-3 text-lg font-semibold rounded-full bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105 transition-all shadow-md"
           >
