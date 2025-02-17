@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/avatars/user2.jpg" // Replace with a mafia-themed image
+          src="/avatars/user2.jpg"
           alt="Mafia Game Hero"
           layout="fill"
           objectFit="cover"
@@ -47,7 +47,10 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-8 flex gap-4 justify-center"
         >
-          <Button className="px-6 py-3 text-lg font-semibold rounded-full bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105 transition-all shadow-md">
+          <Button
+            onClick={() => {}}
+            className="px-6 py-3 text-lg font-semibold rounded-full bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105 transition-all shadow-md"
+          >
             🎯 Play Now
           </Button>
           <Button className="px-6 py-3 text-lg font-semibold border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black hover:scale-105 transition-all rounded-full">
