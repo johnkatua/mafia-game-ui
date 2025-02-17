@@ -8,17 +8,17 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, PropsWithChildren } from "react";
 
 interface MGDialogProps {
-  btnText: String;
-  description: String;
-  title: String;
+  btnText: string;
+  description: string;
+  title: string;
   children?: ReactNode;
 }
 
 // MGDialog -> A custom Mafia Game Dialog
-const MGDialog: FC<MGDialogProps> = ({
+const MGDialog: FC<PropsWithChildren<MGDialogProps>> = ({
   btnText,
   description,
   title,
