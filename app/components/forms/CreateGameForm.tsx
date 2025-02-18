@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { FormEvent, FormEventHandler, useState } from "react";
+import { FormEvent, useState } from "react";
 
 const CreateGameForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -19,13 +19,12 @@ const CreateGameForm = () => {
 
     try {
       const formData = new FormData(e.currentTarget);
-      console.log({ formData });
-      // const response = await fetch("/create_game", {
-      //   method: "POST",
-      //   body: formData,
-      // });
+      const response = await fetch("/create_game", {
+        method: "POST",
+        body: formData,
+      });
 
-      // const data = await response.json();
+      const data = await response.json();
       openAlert({
         game_id: "6740",
         join: "rest",
