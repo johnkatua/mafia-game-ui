@@ -7,10 +7,10 @@ import { useAlertStore, useDialogStore } from "../stores";
 import CreateGameForm from "./forms/CreateGameForm";
 import MGDialog from "./mg-dialog";
 import MGAlert from "./mg-alert";
+import GameAlertContent from "./mg-alert/GameAlertContent";
 
 const HeroSection = () => {
   const { openDialog } = useDialogStore();
-  const { data } = useAlertStore();
   return (
     <section className="h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white relative overflow-hidden">
       {/* Background Image with Overlay */}
@@ -71,10 +71,7 @@ const HeroSection = () => {
         <CreateGameForm />
       </MGDialog>
       <MGAlert title="Your Game's Ready">
-        <p>Share the link with others you want in the Game</p>
-        <p>Game ID: {data?.game_id}</p>
-        <p>Game URL: {data?.join}</p>
-        <p>Joined as {data?.host}</p>
+        <GameAlertContent />
       </MGAlert>
     </section>
   );

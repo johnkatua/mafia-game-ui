@@ -33,10 +33,10 @@ const MGAlert: FC<PropsWithChildren<MGAlertProps>> = ({ title, children }) => {
         </motion.div>
 
         <div className="w-full">
-          <div className="flex items-center justify-between w-full">
-            <AlertTitle className="text-xl font-semibold text-yellow-400">
+          <div className="flex items-end justify-end w-full">
+            {/* <AlertTitle className="text-xl font-semibold text-yellow-400">
               {title}
-            </AlertTitle>
+            </AlertTitle> */}
             <motion.button
               onClick={closeAlert}
               whileHover={{ scale: 1.2, rotate: 90 }}
