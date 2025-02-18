@@ -72,8 +72,8 @@ const HeroSection = () => {
       </MGDialog>
       <MGAlert title="Your Game's Ready">
         <p>Share the link with others you want in the Game</p>
-        <p>{data?.game_id}</p>
-        <p>{data?.join}</p>
+        <p>Game ID: {data?.game_id}</p>
+        <p>Game URL: {data?.join}</p>
         <p>Joined as {data?.host}</p>
       </MGAlert>
     </section>
