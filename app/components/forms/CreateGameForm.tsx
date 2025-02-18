@@ -12,6 +12,7 @@ import { FormEvent, useState } from "react";
 
 const CreateGameForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [name, setName] = useState<string>("");
   const { closeDialog } = useDialogStore();
   const { openAlert } = useAlertStore();
 
@@ -20,10 +21,15 @@ const CreateGameForm = () => {
     setIsLoading(true);
 
     try {
-      const formData = new FormData(e.currentTarget);
       const response = await fetch(`${BASE_URL}/create_game`, {
         method: "POST",
-        body: formData,
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          player_name: name,
+        }),
       });
 
       const data = await response.json();
@@ -52,6 +58,7 @@ const CreateGameForm = () => {
             name="player_name"
             placeholder="Blind Fold (BF)"
             required
+            onChange={(e) => setName(e.target.value)}
             className="border-yellow-400 text-white"
           />
         </div>
