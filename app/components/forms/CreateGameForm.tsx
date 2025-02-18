@@ -19,8 +19,6 @@ const CreateGameForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    console.log(e.currentTarget);
-
     try {
       const formData = new FormData(e.currentTarget);
       const response = await fetch(`${BASE_URL}/create_game`, {
