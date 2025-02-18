@@ -1,12 +1,17 @@
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal } from "lucide-react";
-import React from "react";
+import React, { FC, PropsWithChildren, ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useAlertStore } from "@/app/stores";
 
+interface MGAlertProps {
+  title: string;
+  children: ReactNode;
+}
+
 // MGAlert -> A custom Mafia Game Alert Component
-const MGAlert = () => {
+const MGAlert: FC<PropsWithChildren<MGAlertProps>> = ({ title, children }) => {
   const { isOpen, closeAlert } = useAlertStore();
   if (!isOpen) return null;
   return (
@@ -20,12 +25,12 @@ const MGAlert = () => {
       </motion.div>
       <div className="w-full">
         <div className="flex items-start justify-between w-full">
-          <AlertTitle className="text-2xl font-semibold">Heads up!</AlertTitle>
+          <AlertTitle className="text-2xl font-semibold">{title}</AlertTitle>
           <Button className="" onClick={closeAlert}>
             X
           </Button>
         </div>
-        <AlertDescription>This is an Alert</AlertDescription>
+        <AlertDescription>{children}</AlertDescription>
       </div>
     </Alert>
   );
