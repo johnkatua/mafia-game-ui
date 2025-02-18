@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Loader2 } from "lucide-react";
 import { FormEvent, useState } from "react";
 
 const CreateGameForm = () => {
@@ -63,8 +64,10 @@ const CreateGameForm = () => {
           </AlertDialogCancel>
           <AlertDialogAction
             type="submit"
+            disabled={isLoading}
             className="px-6 py-3 text-lg font-semibold rounded-full bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105 transition-all shadow-md"
           >
+            {isLoading && <Loader2 className="animate-spin" />}
             {isLoading ? "Please Wait" : "Create Game"}
           </AlertDialogAction>
         </AlertDialogFooter>
