@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/app/constants";
 import { useAlertStore, useDialogStore } from "@/app/stores";
 import {
   AlertDialogAction,
@@ -19,7 +20,7 @@ const CreateGameForm = () => {
 
     try {
       const formData = new FormData(e.currentTarget);
-      const response = await fetch("/create_game", {
+      const response = await fetch(`${BASE_URL}/create_game`, {
         method: "POST",
         body: formData,
       });
