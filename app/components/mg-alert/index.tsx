@@ -3,9 +3,12 @@ import { Terminal } from "lucide-react";
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useAlertStore } from "@/app/stores";
 
 // MGAlert -> A custom Mafia Game Alert Component
 const MGAlert = () => {
+  const { isOpen, closeAlert } = useAlertStore();
+  if (!isOpen) return null;
   return (
     <Alert className="flex gap-2 fixed left-4 bottom-4 max-w-lg z-50 bg-gray-100 border-none">
       <motion.div
@@ -18,7 +21,9 @@ const MGAlert = () => {
       <div className="w-full">
         <div className="flex items-start justify-between w-full">
           <AlertTitle className="text-2xl font-semibold">Heads up!</AlertTitle>
-          <Button className="">X</Button>
+          <Button className="" onClick={closeAlert}>
+            X
+          </Button>
         </div>
         <AlertDescription>This is an Alert</AlertDescription>
       </div>

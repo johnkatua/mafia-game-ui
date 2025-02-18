@@ -1,4 +1,4 @@
-import { useDialogStore } from "@/app/stores";
+import { useAlertStore, useDialogStore } from "@/app/stores";
 import {
   AlertDialogAction,
   AlertDialogCancel,
@@ -11,6 +11,7 @@ import { FormEvent, FormEventHandler, useState } from "react";
 const CreateGameForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const { closeDialog } = useDialogStore();
+  const { openAlert } = useAlertStore();
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,10 +26,12 @@ const CreateGameForm = () => {
       // });
 
       // const data = await response.json();
+      openAlert();
     } catch (error) {
       console.error(error);
     } finally {
       setIsLoading(false);
+      closeDialog();
     }
   };
   return (
@@ -43,7 +46,7 @@ const CreateGameForm = () => {
             type="text"
             placeholder="Blind Fold (BF)"
             required
-            className="border-yellow-400"
+            className="border-yellow-400 text-white"
           />
         </div>
         <AlertDialogFooter>
@@ -56,7 +59,6 @@ const CreateGameForm = () => {
           </AlertDialogCancel>
           <AlertDialogAction
             type="submit"
-            onClick={closeDialog}
             className="px-6 py-3 text-lg font-semibold rounded-full bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105 transition-all shadow-md"
           >
             {isLoading ? "Please Wait" : "Create Game"}
