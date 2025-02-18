@@ -26,9 +26,9 @@ const CreateGameForm = () => {
 
       const data = await response.json();
       openAlert({
-        game_id: "6740",
-        join: "rest",
-        host: "Papichulo",
+        game_id: data?.game_id,
+        join: data?.join,
+        host: data.host,
       });
     } catch (error) {
       console.error(error);
