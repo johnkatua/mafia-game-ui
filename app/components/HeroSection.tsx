@@ -69,7 +69,11 @@ const HeroSection = () => {
       >
         <CreateGameForm />
       </MGDialog>
-      <MGAlert />
+      <MGAlert title="Your Game's Ready">
+        <p>Share the link with others you want in the Game</p>
+        <p>Meeting Link</p>
+        <p>Joined as Papichullo</p>
+      </MGAlert>
     </section>
   );
 };
