@@ -18,12 +18,13 @@ const CreateGameForm = () => {
 
     try {
       const formData = new FormData(e.currentTarget);
-      const response = await fetch("/create_game", {
-        method: "POST",
-        body: formData,
-      });
+      console.log({ formData });
+      // const response = await fetch("/create_game", {
+      //   method: "POST",
+      //   body: formData,
+      // });
 
-      const data = await response.json();
+      // const data = await response.json();
     } catch (error) {
       console.error(error);
     } finally {
