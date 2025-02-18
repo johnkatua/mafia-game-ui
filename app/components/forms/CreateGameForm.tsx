@@ -19,6 +19,8 @@ const CreateGameForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
+    console.log(e.currentTarget);
+
     try {
       const formData = new FormData(e.currentTarget);
       const response = await fetch(`${BASE_URL}/create_game`, {
@@ -49,6 +51,7 @@ const CreateGameForm = () => {
           <Input
             id="name"
             type="text"
+            name="player_name"
             placeholder="Blind Fold (BF)"
             required
             className="border-yellow-400 text-white"
