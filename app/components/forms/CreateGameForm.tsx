@@ -6,11 +6,32 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { FormEvent, FormEventHandler, useState } from "react";
 
 const CreateGameForm = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const { closeDialog } = useDialogStore();
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch("/create_game", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="flex flex-col gap-6">
         <div className="grid gap-2">
           <Label htmlFor="name" className="text-gray-50 opacity-70">
@@ -37,7 +58,7 @@ const CreateGameForm = () => {
             onClick={closeDialog}
             className="px-6 py-3 text-lg font-semibold rounded-full bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105 transition-all shadow-md"
           >
-            Create Game
+            {isLoading ? "Please Wait" : "Create Game"}
           </AlertDialogAction>
         </AlertDialogFooter>
       </div>
