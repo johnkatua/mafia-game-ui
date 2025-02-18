@@ -26,7 +26,11 @@ const CreateGameForm = () => {
       // });
 
       // const data = await response.json();
-      openAlert();
+      openAlert({
+        game_id: "6740",
+        join: "rest",
+        host: "Papichulo",
+      });
     } catch (error) {
       console.error(error);
     } finally {
