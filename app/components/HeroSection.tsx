@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useDialogStore } from "../stores";
 import CreateGameForm from "./forms/CreateGameForm";
 import MGDialog from "./mg-dialog";
+import MGAlert from "./mg-alert";
 
 const HeroSection = () => {
   const { openDialog } = useDialogStore();
@@ -68,6 +69,7 @@ const HeroSection = () => {
       >
         <CreateGameForm />
       </MGDialog>
+      <MGAlert />
     </section>
   );
 };
